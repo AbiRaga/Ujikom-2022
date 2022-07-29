@@ -8,7 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class diteltransaksi extends Model
 {
     use HasFactory;
-    public function produk(){
+    protected $guarded = ['id'];
+
+    public function transaksi()
+    {
+        return $this->belongsTo(transaksi::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(user::class);
+    }
+    public function produk()
+    {
         return $this->belongsTo(produk::class);
     }
 }

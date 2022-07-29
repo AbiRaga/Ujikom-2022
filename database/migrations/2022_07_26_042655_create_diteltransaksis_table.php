@@ -18,7 +18,7 @@ class CreateDiteltransaksisTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('produk_id')->constrained();
-            $table->foreignId('transaksi_id')->Nullable()->constrained();
+            $table->foreignId('transaksi_id')->nullable()->constrained();
             $table->integer('qty');
             $table->enum('status',['keranjang','cekout']);
             $table->integer('totalharga');

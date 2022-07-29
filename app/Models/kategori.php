@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class kategori extends Model
 {
     use HasFactory;
-    protected $guarded=['id'];
+    protected $guarded = ['id'];
 
-    public function kategori(){
+    public function produk()
+    {
         return $this->hasMany(produk::class);
     }
 }

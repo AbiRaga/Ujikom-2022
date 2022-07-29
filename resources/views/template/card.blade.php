@@ -8,7 +8,7 @@
                     <h5 class="card-title">{{ $item->name }}</h5>
                     <p class="card-text">Rp.{{ $item->harga }}</p>
                 </div>
-                <a href="#" class="btn btn-dark">Detail</a>
+                <a href="{{ route('pelanggan.detail', $item->id) }}" class="btn btn-dark">Detail</a>
             </div>
         </div>
         @endforeach

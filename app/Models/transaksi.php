@@ -10,11 +10,11 @@ class transaksi extends Model
     use HasFactory;
     protected $guarded=['id'];
 
-    public function detailtransaksi(){
-        return $this->hasMany(detailtransaksi::class,'transaksi_id');
+    public function diteltransaksi(){
+        return $this->hasMany(diteltransaksi::class,'transaksi_id');
     }
 
     public function user(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(user::class);
     }
 }

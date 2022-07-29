@@ -13,4 +13,7 @@ class produk extends Model
     public function kategori(){
         return $this->belongsTo(kategori::class);
     }
+    public function diteltransaksi(){
+        return $this->belongsTo(diteltransaksi::class);
+    }
 }
